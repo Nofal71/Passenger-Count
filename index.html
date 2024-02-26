@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passenger Counter</title>
+</head>
+<style>
+    body {
+        width: 90%;
+        height: 100%; 
+        background-color: rgb(168, 241, 162);
+    }
+
+    .container {
+        width: 50%;
+        margin: auto;
+        margin-top: 50px;
+        padding: 20px;
+        /* background-image: url(download.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+        border-radius: 10px; */
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+        font-size: 24px;
+        color: rgb(0, 0, 0);
+    }
+
+    input[type="text"],
+    input[type="number"] {
+        width: calc(100% - 20px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        border: 1px solid #ced4da;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+</style>
+<body>
+    <div id="main" class="container" style="background-color: #fff;">
+        <label>COUNT PASSANGERS</label>
+        <br><br>
+        <button type="button" class="btn btn-secondary" onclick="count()">Add Passanger </button>
+        <br><br>
+        <button type="button" class="btn btn-primary" onclick="record()">Saved record</button><br><br>
+        <center>
+        <label style="color: rgb(0, 0, 0); font-size: 40px;">Count : </label>
+        <label id="current" style="color: rgb(255, 0, 0); font-size: 40px;">0</label>
+        </center>
+    </div>
+
+    <div id="data" class="container" style="display: none; background-color: #fff;">
+        <label>ENTER PASSENGER INFO</label>
+        <br><br>
+        <label for="name">Name</label><br>
+        <input id="name" type="text" required>
+        <br>
+        <label for="gender">Gender</label><br>
+        <input id="gender" type="text" required>
+        <br>
+        <label for="age">Age</label><br>
+        <input id="age" type="number" required>
+        <br><br>
+        <button type="button" class="btn btn-primary" onclick="Saved()">SAVE</button>
+    </div>
+
+    <div id="record" class="container" style="display: none ; background-color: #fff;">
+    <button style="width: 20%;" type="button" onclick="back()"> Back </button> <br>
+    <lable id="r"></lable>
+    </div>
+
+    <script src="site.js">
+        
+    </script>
+</body>
+</html>
