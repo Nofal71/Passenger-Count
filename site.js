@@ -3,7 +3,7 @@ let current = 0;
 const names = {
 };
 const ages = {
-
+    
 }
 function count (){
     document.getElementById("age").value = "";
@@ -34,8 +34,7 @@ function displayObjectsAsList(object1 , object2) {
     let listHTML = '<lable>';
     for (let key in object1) {
         if (object1.hasOwnProperty(key)) {
-            listHTML += '<lable>' + " Passanger_" + i + "<br><br>"  + "NAME : " + object1[key]  + "<br>" + " AGE : "+ object2[key] + '</lable>' + "<br><br>";
-            i++;
+            listHTML += '<lable>' + " Passanger_" + "<br><br>"  + "NAME : " + object1[key]  + "<br>" + " AGE : "+ object2[key] + '</lable>' + "<br><br>";
         } 
     }
     listHTML += '</lable>';
