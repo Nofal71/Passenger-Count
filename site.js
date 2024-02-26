@@ -8,6 +8,7 @@ const ages = {
 function count (){
     document.getElementById("age").value = "";
     document.getElementById("name").value = "";
+    document.getElementById("gender").value = "";
     current++;
     document.getElementById("record").style.display = "none";
     document.getElementById("main").style.display = "none";
