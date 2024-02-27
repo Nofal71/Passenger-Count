@@ -10,9 +10,13 @@ function count (){
     document.getElementById("name").value = "";
     document.getElementById("gender").value = "";
     current++;
+    
+    
     document.getElementById("record").style.display = "none";
     document.getElementById("main").style.display = "none";
     document.getElementById("data").style.display = "block";
+
+
     document.getElementById("current").innerHTML = current ;
 
 }
@@ -22,8 +26,7 @@ function Saved(){
     let age = document.getElementById("age").value;
     names["passanger_",current] = name;
     ages["passanger_age_",current] = age;
-    console.log(current)
-    console.log(names)
+
     document.getElementById("record").style.display = "none";
     document.getElementById("main").style.display = "block";
     document.getElementById("data").style.display = "none";
