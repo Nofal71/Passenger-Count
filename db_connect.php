@@ -39,6 +39,37 @@ function clearData($conn){
     }
 }
 
+
+function Record($conn){
+    $name = array();
+    $age = array();
+    $gender = array();
+    $select  = mysqli_query($conn , "SELECT name, age, gender FROM passanger");
+    if($select->num_rows > 0){
+       while($row = $select->fetch_assoc()){
+
+            $name[] = $row['name']; 
+            $age[] = $row['age']; 
+            $gender[] = $row['gender']; 
+       }
+    } else {
+        return null;
+    }
+
+    for($i = 0 ; $i < 3 ; $i++ ){
+        echo "<tr>";
+        echo "<td >".$name[$i]."</td>";
+        echo "<td>".$gender[$i]."</td>";
+        echo "<td>".$age[$i]."</td>";
+        echo "</tr><br>";
+    }
+
+}
+
+if(isset($_POST['record'])){
+    header("location: record.php");
+}
+
 if(isset($_POST['save'])) {
     addData($conn);
 }
@@ -46,4 +77,5 @@ if(isset($_POST['save'])) {
 if(isset($_POST['clear'])){
     clearData($conn);
 }
+
 ?>

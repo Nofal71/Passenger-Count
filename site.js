@@ -31,10 +31,6 @@ function record(){
       }
 }
 function back(){
-    if(main.style.display === "none"){
-        main.style.display = "block";
-        data.style.display = "none";
-        rec.style.display = "none";
-      }
+window.location.href = "index.php";
 }
  

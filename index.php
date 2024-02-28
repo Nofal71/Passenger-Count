@@ -10,6 +10,7 @@
    <?php 
    include "db_connect.php";
      session_start();
+
    ?>
 </head>
 
@@ -22,7 +23,9 @@
                 <a class="nav-link active fs-5" aria-current="page" href="index.php">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active fs-5" aria-current="page" style="cursor: pointer;" onclick="record()">Record</a>
+              <form method="post" action="db_connect.php">
+                    <button name="record" type="submit" style="background-color: red ; color: black;">Record</button>
+                </form>
               </li>
               <li class="nav-item">
                 <form method="post" action="db_connect.php">
@@ -65,11 +68,6 @@
     </div>
   </form>
     
-    <div id="record" class="container" style="display: none ; background-color: #fff; ">
-    <button style="width: 20%;" type="button" onclick="back()"> Back </button> <br><br><br>
-    <lable id="r"></lable>
-    </div>
-
     <script src="site.js">
         
     </script>
