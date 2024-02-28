@@ -1,22 +1,22 @@
 
 let current = 0;
-const names = {
-};
-const ages = {
-    
-}
-function count (){
+const names = {};
+const ages = {}
+let main = document.getElementById("main");
+let rec = document.getElementById("record");
+let data = document.getElementById("data");
+
+function count(){
     document.getElementById("age").value = "";
     document.getElementById("name").value = "";
     document.getElementById("gender").value = "";
     current++;
-    
-    
-    document.getElementById("record").style.display = "none";
-    document.getElementById("main").style.display = "none";
-    document.getElementById("data").style.display = "block";
 
-
+  if(data.style.display === "none"){
+    data.style.display = "block";
+    main.style.display = "none";
+    rec.style.display = "none";
+  }
     document.getElementById("current").innerHTML = current ;
 
 }
@@ -27,12 +27,12 @@ function Saved(){
     names["passanger_",current] = name;
     ages["passanger_age_",current] = age;
 
-    document.getElementById("record").style.display = "none";
-    document.getElementById("main").style.display = "block";
-    document.getElementById("data").style.display = "none";
-    
+    if(main.style.display === "none"){
+        main.style.display = "block";
+        data.style.display = "none";
+        rec.style.display = "none";
+      }
 }
-let i = 1;
 
 function displayObjectsAsList(object1 , object2) {
     let listHTML = '<lable>';
@@ -47,10 +47,11 @@ function displayObjectsAsList(object1 , object2) {
 
 
 function record(){
-    document.getElementById("record").style.display = "block";
-    document.getElementById("main").style.display = "none";
-    document.getElementById("data").style.display = "none";
-   
+    if(rec.style.display === "none"){
+        rec.style.display = "block";
+        main.style.display = "none";
+        data.style.display = "none";
+      }
     document.getElementById("r").innerHTML = displayObjectsAsList(names ,ages);
 }
 
