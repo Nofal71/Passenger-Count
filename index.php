@@ -26,7 +26,7 @@
               </li>
               <li class="nav-item">
                 <form method="post" action="db_connect.php">
-                    <button name="clear" type="submit" >CLEAR</button>
+                    <button name="clear" type="submit" style="background-color: red ; color: black;">CLEAR</button>
                 </form>
               </li>
             </ul>

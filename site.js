@@ -38,6 +38,3 @@ function back(){
       }
 }
  
-function clearAndReload() {
-    window.location.reload();
-}
