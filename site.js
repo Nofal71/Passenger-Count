@@ -30,7 +30,4 @@ function record(){
         data.style.display = "none";
       }
 }
-function back(){
-window.location.href = "index.php";
-}
- 
+

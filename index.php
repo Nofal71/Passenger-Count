@@ -9,6 +9,8 @@
    <link rel="stylesheet" href="style.css">
    <?php 
    include "db_connect.php";
+   include "backend.php";
+
      session_start();
 
    ?>
@@ -23,13 +25,13 @@
                 <a class="nav-link active fs-5" aria-current="page" href="index.php">Home</a>
               </li>
               <li class="nav-item">
-              <form method="post" action="db_connect.php">
-                    <button name="record" type="submit" style="background-color: red ; color: black;">Record</button>
+              <form method="post" action="backend.php">
+                    <button name="record" type="submit" style="background-color: white ; color: black;">Record</button>
                 </form>
               </li>
               <li class="nav-item">
-                <form method="post" action="db_connect.php">
-                    <button name="clear" type="submit" style="background-color: red ; color: black;">CLEAR</button>
+                <form method="post" action="backend.php">
+                    <button name="clear" type="submit" style="background-color: white ; border-radius: 100px; color: black;">CLEAR</button>
                 </form>
               </li>
             </ul>
@@ -52,7 +54,7 @@
     </div>
 
     <div id="data" class="container" style="display: none; background-color: #fff; ">
-    <form method="post" action="db_connect.php">
+    <form method="post" action="backend.php">
       <label>ENTER PASSENGER INFO</label>
       <br><br>
       <label for="name">Name</label><br>

@@ -11,13 +11,15 @@
    <link rel="stylesheet" href="style.css">
    <?php 
    include "db_connect.php";
+   include "backend.php";
+
    ?>
 </head>
 
 
 <body>
 <div id="record" class="container" style="display: block ; background-color: #fff; ">
-    <button style="width: 20%;" type="button" onclick="back()"> Back </button>
+    <button style="width: 20%; background-color: white ; color: black; border-radius: 300px ; width: 10%; font-size: 50px;" type="button" onclick="back()"> &#8592; </button>
     <table class="table"> 
         <tr>
         <th scope="col"> NAMES </th>
