@@ -10,8 +10,11 @@
    <?php 
    include "db_connect.php";
    include "backend.php";
-
-     session_start();
+   session_start();
+// if (!isset($_SESSION['loggedin'])) {
+//     header('Location: login.php');
+//     exit;
+// }
 
    ?>
 </head>

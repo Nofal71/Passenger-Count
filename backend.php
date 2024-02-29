@@ -65,6 +65,41 @@ function Record($conn){
 
 }
 
+function login($conn, $currentPass, $currentMail) {
+    $sql = mysqli_query($conn, "SELECT email, password FROM login");
+    $email = array();
+    $password = array();
+    if ($sql->num_rows > 0) {
+        while ($row = $sql->fetch_assoc()) {
+            $email[] = $row['email'];
+            $password[] = $row['password'];
+        }
+        $length = count($email);
+        for ($i = 0; $i < $length; $i++) {
+            if ($currentMail == $email[$i] && $currentPass == $password[$i]) {
+                return true; 
+            }
+        }
+    }
+    return false; 
+}
+
+if (isset($_POST['login'])) {
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    if (login($conn, $password, $email)) {
+        $_SESSION['loggedin'] = true;
+        header('Location: index.php');
+        exit;
+    } else {
+        header("Location: login.php");
+        exit;
+    }
+}
+
+
+
+
 if(isset($_POST['record'])){
     header("location: record.php");
 }
